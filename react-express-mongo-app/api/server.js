@@ -10,7 +10,16 @@ app.use(cors());
 app.get("/users", async (req, res) => {
   const users = await User.find();
 
-  res.json(users);
+  const userMap = {};
+  users.forEach(user => {
+    userMap[user._id] = user;
+  });
+
+  res.json(userMap);
+
+  //res.send(userMap);
+
+  //res.json(users);
 });
 
 app.get("/user-create", async (req, res) => {
