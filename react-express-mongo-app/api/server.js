@@ -8,9 +8,9 @@ const PORT = 8080;
 app.use(cors());
 
 app.get("/users", async (req, res) => {
-  const users = await User.find();
+  const users = await User.find({ username: 'userTest');
 
-  res.json(users);
+  res.json(users.age);
 });
 
 app.get("/user-create", async (req, res) => {
