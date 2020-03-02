@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import axios from 'axios';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import axios from "axios";
+import "./App.css";
 
-const apiUrl = `http://localhost:8080`;
+const apiUrl = `http://217.160.212.154:8080`;
 
 class App extends Component {
   state = {
@@ -11,12 +11,12 @@ class App extends Component {
   };
 
   async createUser() {
-    await axios.get(apiUrl + '/user-create');
+    await axios.get(apiUrl + "/user-create");
     this.loadUsers();
   }
 
   async loadUsers() {
-    const res = await axios.get(apiUrl + '/users');
+    const res = await axios.get(apiUrl + "/users");
     this.setState({
       users: res.data
     });
