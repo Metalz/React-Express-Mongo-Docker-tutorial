@@ -14,7 +14,7 @@ app.get("/users", async (req, res) => {
 });
 
 app.get("/user-create", async (req, res) => {
-  const user = new User({ username: "userTest" }, { age: 77 });
+  const user = new User({ username: "userTest" });
 
   await user.save().then(() => console.log("This is the user : " + user));
 
