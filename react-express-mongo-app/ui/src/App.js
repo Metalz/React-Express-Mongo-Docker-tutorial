@@ -34,9 +34,9 @@ class App extends Component {
           <button onClick={() => this.createUser()}>Create User</button>
           <p>Users list:</p>
           <ul>
-            {/*             {this.state.users.map(user => (
+            {this.state.users.map(user => (
               <li key={user._id}>id: {user._id}</li>
-            ))} */}
+            ))}
           </ul>
         </header>
       </div>
