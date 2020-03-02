@@ -10,7 +10,7 @@ app.use(cors());
 app.get("/users", async (req, res) => {
   const users = await User.find();
 
-  res.json(users.username);
+  res.json(users);
 });
 
 app.get("/user-create", async (req, res) => {
