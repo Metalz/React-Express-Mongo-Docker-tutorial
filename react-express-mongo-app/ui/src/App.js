@@ -35,7 +35,7 @@ class App extends Component {
           <p>Users list:</p>
           <ul>
             {this.state.users.map(user => (
-              <li key={user.age}>id: {user._id}</li>
+              <li key={user.id}>age: {user._id}</li>
             ))}
           </ul>
         </header>
