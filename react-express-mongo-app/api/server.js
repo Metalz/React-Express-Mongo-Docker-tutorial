@@ -15,9 +15,7 @@ app.get("/users", async (req, res) => {
     userMap[user._id] = user;
   });
 
-  res.json(userMap);
-
-  //res.send(userMap);
+  res.send(userMap);
 
   //res.json(users);
 });
