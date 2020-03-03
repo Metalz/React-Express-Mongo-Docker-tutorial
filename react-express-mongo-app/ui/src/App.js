@@ -36,8 +36,8 @@ class App extends Component {
           <ul>
             {this.state.users.map(user => (
               <li key={user._id}>
-                User: {user.age}
-                {user.username}
+                Age: {user.age}
+                Name: {user.username}
               </li>
             ))}
           </ul>
